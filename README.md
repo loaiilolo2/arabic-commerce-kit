@@ -20,8 +20,8 @@ Customers type numbers in every possible way: Arabic digits, spaces, `+20`, `002
 ```ts
 import { normalizePhone, egyptianOperator } from "arabic-commerce-kit";
 
-normalizePhone("٠١٠٦٩٥٥٩٣١٠");        // "+201069559310"
-normalizePhone("+20 106 955 9310");   // "+201069559310"
+normalizePhone("٠١٠١٢٣٤٥٦٧٨");        // "+201012345678"
+normalizePhone("+20 101 234 5678");   // "+201012345678"
 normalizePhone("01369559310");        // null (invalid prefix)
 egyptianOperator("01012345678");      // "Vodafone"
 ```
@@ -47,7 +47,7 @@ Turn a cart into a ready-to-send `wa.me` link with a clear Arabic order summary:
 ```ts
 import { buildWhatsAppOrderLink } from "arabic-commerce-kit";
 
-const link = buildWhatsAppOrderLink("01069559310", [
+const link = buildWhatsAppOrderLink("01012345678", [
   { name: "حذاء رياضي", price: 850, qty: 1 },
   { name: "شراب قطن", price: 75, qty: 2 },
 ], { storeName: "متجر النور", shipping: 50 });
