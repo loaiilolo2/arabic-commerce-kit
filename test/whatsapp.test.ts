@@ -17,8 +17,8 @@ describe("buildOrderMessage", () => {
 
 describe("buildWhatsAppOrderLink", () => {
   it("builds a wa.me link with encoded text", () => {
-    const link = buildWhatsAppOrderLink("01069559310", items);
-    expect(link.startsWith("https://wa.me/201069559310?text=")).toBe(true);
+    const link = buildWhatsAppOrderLink("01012345678", items);
+    expect(link.startsWith("https://wa.me/201012345678?text=")).toBe(true);
   });
   it("throws on an invalid merchant number", () => {
     expect(() => buildWhatsAppOrderLink("123", items)).toThrow();
