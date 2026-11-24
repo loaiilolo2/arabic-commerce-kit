@@ -41,7 +41,7 @@ export function cleanPhone(input: string): string {
 }
 
 /**
- * Normalize a phone number to E.164 format (e.g. "+201069559310").
+ * Normalize a phone number to E.164 format (e.g. "+201012345678").
  * Returns null when the number cannot be normalized for the given country.
  */
 export function normalizePhone(input: string, country: keyof typeof COUNTRY_RULES = "EG"): string | null {
