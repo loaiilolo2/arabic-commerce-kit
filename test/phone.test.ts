@@ -13,8 +13,8 @@ describe("normalizePhone (EG)", () => {
     expect(normalizePhone("٠١٠١٢٣٤٥٦٧٨")).toBe("+201012345678");
   });
   it("rejects wrong prefixes and lengths", () => {
-    expect(normalizePhone("01369559310")).toBeNull();
-    expect(normalizePhone("0106955931")).toBeNull();
+    expect(normalizePhone("01312345678")).toBeNull();
+    expect(normalizePhone("0101234567")).toBeNull();
     expect(isValidPhone("01012345678")).toBe(true);
   });
 });
